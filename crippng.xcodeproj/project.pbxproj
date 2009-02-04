@@ -10,13 +10,10 @@
 		2C05A19C06CAA52B00D84F6F /* GeneratePreviewForURL.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C05A19B06CAA52B00D84F6F /* GeneratePreviewForURL.m */; };
 		61E3BCFB0870B4F2002186A0 /* GenerateThumbnailForURL.m in Sources */ = {isa = PBXBuildFile; fileRef = 61E3BCFA0870B4F2002186A0 /* GenerateThumbnailForURL.m */; };
 		8D576312048677EA00EA77CD /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 08FB77B6FE84183AC02AAC07 /* main.c */; settings = {ATTRIBUTES = (); }; };
-		DA4160780F39DFEE00F517AE /* flipchannels.c in Sources */ = {isa = PBXBuildFile; fileRef = DA4160770F39DFED00F517AE /* flipchannels.c */; };
+		DA4160EB0F3A05C200F517AE /* ipin.py in Resources */ = {isa = PBXBuildFile; fileRef = DA4160EA0F3A05C200F517AE /* ipin.py */; };
 		DA6729470F38CCBE00D70FFE /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA6729460F38CCBE00D70FFE /* AppKit.framework */; };
 		DA6729FD0F38CCC700D70FFE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA6729FC0F38CCC700D70FFE /* Foundation.framework */; };
-		DA672B410F39915F00D70FFE /* libpng.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DA672B400F39915F00D70FFE /* libpng.a */; };
-		DA672B440F39917600D70FFE /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = DA672B430F39917600D70FFE /* libz.dylib */; };
 		DA8B0BA10F39CCCF00A5F685 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA8B0BA00F39CCCF00A5F685 /* CoreFoundation.framework */; };
-		DA9AAC8A0F38B6050041B26C /* fixpng.c in Sources */ = {isa = PBXBuildFile; fileRef = DA9AAC860F38B6050041B26C /* fixpng.c */; };
 		F28CFC030A3EC0C6000ABFF5 /* QuickLook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F28CFC020A3EC0C6000ABFF5 /* QuickLook.framework */; };
 /* End PBXBuildFile section */
 
@@ -26,13 +23,10 @@
 		61E3BCFA0870B4F2002186A0 /* GenerateThumbnailForURL.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = GenerateThumbnailForURL.m; sourceTree = "<group>"; };
 		8D576316048677EA00EA77CD /* crippng.qlgenerator */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = crippng.qlgenerator; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D576317048677EA00EA77CD /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		DA4160770F39DFED00F517AE /* flipchannels.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = flipchannels.c; sourceTree = "<group>"; usesTabs = 0; };
+		DA4160EA0F3A05C200F517AE /* ipin.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = ipin.py; sourceTree = "<group>"; };
 		DA6729460F38CCBE00D70FFE /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		DA6729FC0F38CCC700D70FFE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		DA672B400F39915F00D70FFE /* libpng.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libpng.a; path = libpng/lib/libpng.a; sourceTree = "<group>"; };
-		DA672B430F39917600D70FFE /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = /usr/lib/libz.dylib; sourceTree = "<absolute>"; };
 		DA8B0BA00F39CCCF00A5F685 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
-		DA9AAC860F38B6050041B26C /* fixpng.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = fixpng.c; sourceTree = "<group>"; };
 		F28CFC020A3EC0C6000ABFF5 /* QuickLook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuickLook.framework; path = /System/Library/Frameworks/QuickLook.framework; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
@@ -45,8 +39,6 @@
 				DA8B0BA10F39CCCF00A5F685 /* CoreFoundation.framework in Frameworks */,
 				DA6729FD0F38CCC700D70FFE /* Foundation.framework in Frameworks */,
 				F28CFC030A3EC0C6000ABFF5 /* QuickLook.framework in Frameworks */,
-				DA672B410F39915F00D70FFE /* libpng.a in Frameworks */,
-				DA672B440F39917600D70FFE /* libz.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,8 +63,6 @@
 				DA8B0BA00F39CCCF00A5F685 /* CoreFoundation.framework */,
 				DA6729FC0F38CCC700D70FFE /* Foundation.framework */,
 				F28CFC020A3EC0C6000ABFF5 /* QuickLook.framework */,
-				DA672B400F39915F00D70FFE /* libpng.a */,
-				DA672B430F39917600D70FFE /* libz.dylib */,
 			);
 			name = "Frameworks and Libraries";
 			sourceTree = "<group>";
@@ -80,6 +70,7 @@
 		089C167CFE841241C02AAC07 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				DA4160EA0F3A05C200F517AE /* ipin.py */,
 				8D576317048677EA00EA77CD /* Info.plist */,
 			);
 			name = Resources;
@@ -89,8 +80,6 @@
 			isa = PBXGroup;
 			children = (
 				08FB77B6FE84183AC02AAC07 /* main.c */,
-				DA9AAC860F38B6050041B26C /* fixpng.c */,
-				DA4160770F39DFED00F517AE /* flipchannels.c */,
 				2C05A19B06CAA52B00D84F6F /* GeneratePreviewForURL.m */,
 				61E3BCFA0870B4F2002186A0 /* GenerateThumbnailForURL.m */,
 			);
@@ -160,6 +149,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA4160EB0F3A05C200F517AE /* ipin.py in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -181,10 +171,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D576312048677EA00EA77CD /* main.c in Sources */,
-				DA9AAC8A0F38B6050041B26C /* fixpng.c in Sources */,
 				2C05A19C06CAA52B00D84F6F /* GeneratePreviewForURL.m in Sources */,
 				61E3BCFB0870B4F2002186A0 /* GenerateThumbnailForURL.m in Sources */,
-				DA4160780F39DFEE00F517AE /* flipchannels.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -201,10 +189,8 @@
 				GCC_MODEL_TUNING = G5;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
-				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/libpng/include\"";
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = /Library/QuickLook;
-				LIBRARY_SEARCH_PATHS = "\"$(SRCROOT)/libpng/lib\"";
 				PRODUCT_NAME = crippng;
 				WRAPPER_EXTENSION = qlgenerator;
 			};
@@ -217,10 +203,8 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
-				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/libpng/include\"";
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = /Library/QuickLook;
-				LIBRARY_SEARCH_PATHS = "\"$(SRCROOT)/libpng/lib\"";
 				PRODUCT_NAME = crippng;
 				WRAPPER_EXTENSION = qlgenerator;
 			};
