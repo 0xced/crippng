@@ -43,7 +43,7 @@ def getNormalizedPNG():
     
     chunkPos = len(newPNG)
     
-    # For each chunk in the PNG file    
+    # For each chunk in the PNG file
     while chunkPos < len(oldPNG):
         
         # Reading chunk
@@ -91,7 +91,7 @@ def getNormalizedPNG():
             chunkCRC = crc32(chunkData, chunkCRC)
             chunkCRC = (chunkCRC + 0x100000000) % 0x100000000
 
-        # Removing CgBI chunk        
+        # Removing CgBI chunk
         if chunkType != "CgBI":
             newPNG += pack(">L", chunkLength)
             newPNG += chunkType
