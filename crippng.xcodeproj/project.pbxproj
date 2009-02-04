@@ -10,6 +10,7 @@
 		2C05A19C06CAA52B00D84F6F /* GeneratePreviewForURL.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C05A19B06CAA52B00D84F6F /* GeneratePreviewForURL.m */; };
 		61E3BCFB0870B4F2002186A0 /* GenerateThumbnailForURL.m in Sources */ = {isa = PBXBuildFile; fileRef = 61E3BCFA0870B4F2002186A0 /* GenerateThumbnailForURL.m */; };
 		8D576312048677EA00EA77CD /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 08FB77B6FE84183AC02AAC07 /* main.c */; settings = {ATTRIBUTES = (); }; };
+		DA4160780F39DFEE00F517AE /* flipchannels.c in Sources */ = {isa = PBXBuildFile; fileRef = DA4160770F39DFED00F517AE /* flipchannels.c */; };
 		DA6729470F38CCBE00D70FFE /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA6729460F38CCBE00D70FFE /* AppKit.framework */; };
 		DA6729FD0F38CCC700D70FFE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA6729FC0F38CCC700D70FFE /* Foundation.framework */; };
 		DA672B410F39915F00D70FFE /* libpng.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DA672B400F39915F00D70FFE /* libpng.a */; };
@@ -25,6 +26,7 @@
 		61E3BCFA0870B4F2002186A0 /* GenerateThumbnailForURL.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = GenerateThumbnailForURL.m; sourceTree = "<group>"; };
 		8D576316048677EA00EA77CD /* crippng.qlgenerator */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = crippng.qlgenerator; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D576317048677EA00EA77CD /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		DA4160770F39DFED00F517AE /* flipchannels.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = flipchannels.c; sourceTree = "<group>"; usesTabs = 0; };
 		DA6729460F38CCBE00D70FFE /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		DA6729FC0F38CCC700D70FFE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		DA672B400F39915F00D70FFE /* libpng.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libpng.a; path = lib/libpng.a; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 			children = (
 				08FB77B6FE84183AC02AAC07 /* main.c */,
 				DA9AAC860F38B6050041B26C /* fixpng.c */,
+				DA4160770F39DFED00F517AE /* flipchannels.c */,
 				2C05A19B06CAA52B00D84F6F /* GeneratePreviewForURL.m */,
 				61E3BCFA0870B4F2002186A0 /* GenerateThumbnailForURL.m */,
 			);
@@ -181,6 +184,7 @@
 				DA9AAC8A0F38B6050041B26C /* fixpng.c in Sources */,
 				2C05A19C06CAA52B00D84F6F /* GeneratePreviewForURL.m in Sources */,
 				61E3BCFB0870B4F2002186A0 /* GenerateThumbnailForURL.m in Sources */,
+				DA4160780F39DFEE00F517AE /* flipchannels.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

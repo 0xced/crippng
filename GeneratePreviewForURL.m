@@ -7,6 +7,8 @@
 // takes a png buffer and a file descriptor where the valid png will be written
 bool fix_png(const unsigned char *png, int fd);
 
+bool flip_channels(int inputFd, int outputFd);
+
 NSString *uuid()
 {
 	CFUUIDRef uuid = CFUUIDCreate(kCFAllocatorDefault);
@@ -26,16 +28,24 @@ OSStatus GeneratePreviewForURL(void *thisInterface, QLPreviewRequestRef preview,
 	if ([[image representations] count] == 0)
 	{
 		// Assume crippled iPhone png
-		NSString *tempPath = [[NSTemporaryDirectory() stringByAppendingPathComponent:uuid()] stringByAppendingPathExtension:@"png"];
-		[[NSFileManager defaultManager] createFileAtPath:tempPath contents:[NSData data] attributes:nil];
-		BOOL ok = fix_png([data bytes], [[NSFileHandle fileHandleForWritingAtPath:tempPath] fileDescriptor]);
-		if (ok)
+		NSString *tempPathFixed = [[NSTemporaryDirectory() stringByAppendingPathComponent:uuid()] stringByAppendingPathExtension:@"png"];
+		NSString *tempPathFlipped = [[NSTemporaryDirectory() stringByAppendingPathComponent:uuid()] stringByAppendingPathExtension:@"png"];
+		[[NSFileManager defaultManager] createFileAtPath:tempPathFixed contents:[NSData data] attributes:nil];
+		[[NSFileManager defaultManager] createFileAtPath:tempPathFlipped contents:[NSData data] attributes:nil];
+		BOOL fixOK = fix_png([data bytes], [[NSFileHandle fileHandleForWritingAtPath:tempPathFixed] fileDescriptor]);
+		if (fixOK)
 		{
-			data = [NSData dataWithContentsOfFile:tempPath];
-			[image release];
-			image = [[NSImage alloc] initWithData:data];
+			data = [NSData dataWithContentsOfFile:tempPathFixed];
+			BOOL flipOK = flip_channels([[NSFileHandle fileHandleForReadingAtPath:tempPathFixed] fileDescriptor], [[NSFileHandle fileHandleForWritingAtPath:tempPathFlipped] fileDescriptor]);
+			if (flipOK)
+			{
+				data = [NSData dataWithContentsOfFile:tempPathFlipped];
+				[image release];
+				image = [[NSImage alloc] initWithData:data];
+			}
 		}
-		[[NSFileManager defaultManager] removeItemAtPath:tempPath error:nil];
+		[[NSFileManager defaultManager] removeItemAtPath:tempPathFixed error:nil];
+		[[NSFileManager defaultManager] removeItemAtPath:tempPathFlipped error:nil];
 	}
 	
 	NSDictionary *properties = [NSDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithFloat:roundf([image size].width)], kQLPreviewPropertyWidthKey, [NSNumber numberWithFloat:roundf([image size].height)], kQLPreviewPropertyHeightKey, nil];
