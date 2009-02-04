@@ -29,7 +29,7 @@
 		DA4160770F39DFED00F517AE /* flipchannels.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = flipchannels.c; sourceTree = "<group>"; usesTabs = 0; };
 		DA6729460F38CCBE00D70FFE /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		DA6729FC0F38CCC700D70FFE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		DA672B400F39915F00D70FFE /* libpng.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libpng.a; path = lib/libpng.a; sourceTree = "<group>"; };
+		DA672B400F39915F00D70FFE /* libpng.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libpng.a; path = libpng/lib/libpng.a; sourceTree = "<group>"; };
 		DA672B430F39917600D70FFE /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = /usr/lib/libz.dylib; sourceTree = "<absolute>"; };
 		DA8B0BA00F39CCCF00A5F685 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
 		DA9AAC860F38B6050041B26C /* fixpng.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = fixpng.c; sourceTree = "<group>"; };
@@ -201,13 +201,10 @@
 				GCC_MODEL_TUNING = G5;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
-				HEADER_SEARCH_PATHS = /opt/local/include;
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/libpng/include\"";
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = /Library/QuickLook;
-				LIBRARY_SEARCH_PATHS = (
-					./lib,
-					"\"$(SRCROOT)/lib\"",
-				);
+				LIBRARY_SEARCH_PATHS = "\"$(SRCROOT)/libpng/lib\"";
 				PRODUCT_NAME = crippng;
 				WRAPPER_EXTENSION = qlgenerator;
 			};
@@ -220,13 +217,10 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
-				HEADER_SEARCH_PATHS = /opt/local/include;
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/libpng/include\"";
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = /Library/QuickLook;
-				LIBRARY_SEARCH_PATHS = (
-					./lib,
-					"\"$(SRCROOT)/lib\"",
-				);
+				LIBRARY_SEARCH_PATHS = "\"$(SRCROOT)/libpng/lib\"";
 				PRODUCT_NAME = crippng;
 				WRAPPER_EXTENSION = qlgenerator;
 			};
