@@ -31,13 +31,11 @@ import stat
 import sys
 import os
 
-def getNormalizedPNG():
+def getNormalizedPNG(oldPNG):
     pngheader = "\x89PNG\r\n\x1a\n"
     
-    oldPNG = sys.stdin.read()
-
     if oldPNG[:8] != pngheader:
-        return None
+        return ""
     
     newPNG = oldPNG[:8]
     
@@ -69,7 +67,7 @@ def getNormalizedPNG():
                 
             except Exception, e:
                 # The PNG image is normalized
-                return None
+                return ""
 
             # Swapping red & blue bytes for each pixel
             newdata = ""
@@ -105,4 +103,4 @@ def getNormalizedPNG():
         
     return newPNG
 
-print getNormalizedPNG()
+sys.stdout.write(getNormalizedPNG(sys.stdin.read()))
